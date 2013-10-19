@@ -1,65 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Tahia-khan.github.io by tahia-khan</title>
+<head>
+	<title> tahia index </title>
+	<script type="text/javascript" src="/static/jquery-1.8.0.js"></script>
+	<script type="text/javascript" src="/static/frontjs.js"></script>
+	<script type="text/javascript" src="/static/scrollbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+	<br><br>
+	<div class="post-title">Tahia Khan</div>
+	<br><br>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Tahia-khan.github.io</h1>
-        <p>my git page</p>
+	<div class="nav-main">
+	<a class="nav-list" target="_blank" href="http://goo.gl/b2tyB">google+</a><br><br>
+	<a class="nav-list" target="_blank" href="https://bitbucket.org/tkhan">bitbucket</a><br><br>
+	<a class="nav-list" target="_blank" href="https://docs.google.com/open?id=0B6454eVzYMZvenJ4Qi1CRjZoaUk">resume</a><br><br>
+	<a class="nav-list" href="javascript:void(0);" id="projects-link">projects</a><br><br>
+	</div>
+
+	<div class="project-description" id="asciichan-desc"> <b>ASCIICHAN</b><br><br>I made this simple 4chan spoof to practise using some of the features of Google App Engine and webapp2. It includes:<br>
+		<ul>
+			<li>Using the Datastore (GAE database) to store submissions</li>
+			<li>Using Memcache to explore caching functionality</li>
+			<li>Using the Static Map API from Google Maps to display the (latitude, longitude) of where a submission was made</li>
+		</ul>
+		Here's a link to the project: <a href="/asciichan" target="_blank" class="project-container">asciichan</a>
+	</div>
+
+	<div class="project-description" id="cusblog-desc"> <b>CUSTOM BLOG</b><br><br>This is a custom blog whose backend I built from scratch using Python. Backend features of include:<br>
+		<ul>
+			<li>Using the Datastore (GAE database) to store posts</li>
+			<li>Using Memcache to cache the front page and individual posts, thereby reducing Datastore hits</li>
+			<li>Displaying the last time a Datastore request was made for each page by storing query time</li>
+			<li>Adding a .json extension for all pages</li>
+			<li>Exploring URI routing and generation of unique post IDs</li>
+
+		</ul>
+		Here's a link to the project: <a href="/blog" target="_blank" class="project-container">custom blog</a>
+	</div>
+
+	<div class="project-description" id="wiki-desc"> <b>WIKI</b><br><br>A wiki is a page that can be developed collaboratively by its users by allowing anyone to edit content or add new content. Backend features of this wiki include:<br>
+		<ul>
+			<li>Dynamic URI routing and generation </li>
+			<li>Using the Datastore (GAE database) to store posts and users</li>
+			<li>User authentication (hashing, cookies)</li>
+
+		</ul>
+		Here's a link to the project: <a href="http://wrongtahia.appspot.com/" target="_blank" class="project-container">wiki</a>
+	</div>
+
+	<div class="project-description" id="recipe-desc"> 
+		<div class="scrollbar" id="style-3"> 
+			<div class="force-overflow">
+				<b>BYTEFINDER - REVERSE RECIPE LOOK UP</b><br><br> 
+
+Bytefinder is a reverse-recipe lookup application. Its basic function is to take a list of ingredients provided by the user and determine which recipes correspond best with the ingredients given.  It will return recipes in ascending order by the percentage matched with the given list of ingredients. Search results will redirect to the appropriate "Budgetbytes.com" page for the recipe.  
+This application is yet to be deployed because I decided to change frameworks/hosts during production.  Migration to a PostgreSQL database is still underway to allow for hosting on Heroku. <br><br>
+<b>Development Process</b><br><br>
+This application was initially built on Google App Engine and webapp2. I switched frameworks to Flask and hosting to Heroku in order to gain experience with different frameworks.  The application is available locally because the Ingredients and Recipes databases are built on SQLite3. Migration to a PostgreSQL database is still underway in order to allow for hosting on Heroku. <br><br>
+<b>Backend</b><br><br>
+The database of recipes and ingredients were built using a web crawler (with the use of Beautiful Soup library in simple Python scripts) to pull recipe names, prices, a list of ingredients corresponding to each recipe, and their URLs from "budgetbytes.blogspot.ca".  It was initially implemented on SQLite3. I need to learn how to work with PostgreSQL in order to recreate the databases for hosting on Heroku.<br><br>
+<b>Frontend</b><br><br>
+The most challenging part of designing the frontend of this application was integrating the jQuery Autocomplete UI with the ingredient search bar to dynamically generate ingredient names for the user as he/she types. I was also introduced to AJAX for the first time in order to add a loading bar for the search. <br><br><br>
 
 
-        <p class="view"><a href="https://github.com/tahia-khan">View My GitHub Profile</a></p>
 
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+		
+Here's a link to the <a href="https://bitbucket.org/tkhan/bytefinder" target="_blank" class="project-container">source code</a> of this project. Since this project hasn't actually been deployed, my cop-out solution to show off my progress is a video of the local experience! Click to show the video: <a id="show-vid" href="javascript:void(0);" class="project-container">bytefinder</a><br><br>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		<iframe id="byte-vid" style="display:none" type="text/html" width="550" height="385" src="http://www.youtube.com/embed/8KK9jajifpQ" frameborder="0">
+			[Your browser does not support the video tag. You ought to update!]
+		</iframe>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+			<script type="text/javascript">
+			<!-- 
+			$("#show-vid").click(function() {
+				$("#byte-vid").fadeToggle('fast');
+				});
+			</script>
+			
+			</div>  
+		</div>  
+	</div>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	<div class="project-description" id="essay-desc"> <b>ESSAYS</b><br><br>Artifacts from my secret life.<br><br>
+		Here's a link to an unhealthy obsession with single-party state leaders: <a target="_blank" href="http://sweetibnotes.blogspot.ca/p/hl-history-americas.html" target="_blank" class="project-container">essays</a>
+	</div>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+	<div class="clear"> </div>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+			<div id="project-list" style="display:none">
+				<div id="asciichan" class="project-container">>  asciichan</div>
+				<div id="cusblog" class="project-container">>  custom blog</div>
+				<div id="wiki" class="project-container">>  wiki</div>
+				<div id="bytefinder" class="project-container">>  reverse recipe look-up</div>
+				<div id="hlessays" class="project-container">>  essays</div>
+			</div>
+			
+  
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+		<script type="text/javascript">
+			<!-- 
+			$("#projects-link").click(function() {
+				$("#project-list").slideToggle();
+				});
+			$("#asciichan").click(function() {
+				$("#wiki-desc").fadeOut('fast');
+				$("#cusblog-desc").fadeOut('fast');
+				$("#recipe-desc").fadeOut('fast');
+				$("#essay-desc").fadeOut('fast');				
+				$("#asciichan-desc").fadeToggle('fast');
+				});
+			$("#cusblog").click(function() {
+				$("#wiki-desc").fadeOut('fast');
+				$("#asciichan-desc").fadeOut('fast')
+				$("#recipe-desc").fadeOut('fast');
+				$("#essay-desc").fadeOut('fast');				
+				$("#cusblog-desc").fadeToggle('fast');
+			});
+			$("#wiki").click(function() {
+				$("#cusblog-desc").fadeOut('fast');
+				$("#asciichan-desc").fadeOut('fast')
+				$("#recipe-desc").fadeOut('fast');
+				$("#essay-desc").fadeOut('fast');
+				$("#wiki-desc").fadeToggle('fast');
+			});
+			$("#bytefinder").click(function() {
+				$("#cusblog-desc").fadeOut('fast');
+				$("#asciichan-desc").fadeOut('fast')
+				$("#wiki-desc").fadeOut('fast');
+				$("#essay-desc").fadeOut('fast');
+				$("#recipe-desc").fadeToggle('fast');
+			});
+			$("#hlessays").click(function() {
+				$("#cusblog-desc").fadeOut('fast');
+				$("#asciichan-desc").fadeOut('fast')
+				$("#wiki-desc").fadeOut('fast');
+				$("#recipe-desc").fadeOut('fast');
+				$("#essay-desc").fadeToggle('fast');
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+			});
+			-->
+		</script>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<script language="javascript"> 
+function toggle() {
+	var ele = document.getElementById("toggleText");
+	var text = document.getElementById("displayText");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+		text.innerHTML = "show";
+  	}
+	else {
+		ele.style.display = "block";
+		text.innerHTML = "hide";
+	}
+} 
+</script>
+		
+	
+	</div>
+	
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+	<canvas onresize='resize()' id="canvas" width="900" height="200">[Your browser does not support HTML5 canvas]</canvas>
+	<div class="canvas-text" id="shawlispeech">hi! my name is tahia khan. i'm a computer engineering student at the university of toronto (and possibly some other things as well).<br><br>(you can move me by pressing the left and right keys) </div>
+	<script type="text/javascript" src="../static/requestAnimFrame.js"></script>
+	<script type="text/javascript" src="../static/movement.js"></script>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+</body>
 </html>
+

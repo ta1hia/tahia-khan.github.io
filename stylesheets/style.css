@@ -1,0 +1,209 @@
+body {
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: gray;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+textarea {
+  width: 500px;
+  height: 400px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.post + .post {
+    margin-top: 15px;
+}
+
+.post-heading {
+    position: relative;
+    border-bottom: 3px solid #666;
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.post-date {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: #999;
+
+}
+
+.post-content {
+    margin-top: 5px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.age {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: gray;
+    font-size: 12px;
+}
+
+.nav-list {
+    color: #000000;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.nav-text {
+    margin-top: 5px;
+    color: #000000;
+    text-decoration: none;
+    padding-left: 1%;
+}
+.nav-list:hover {
+    color: #B80000;
+}
+
+.project-container {
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 1em;
+	color: #B80000;
+}
+
+.project-container:hover {
+	text-decoration: underline;
+}
+
+.project-description {
+	position:fixed;
+	width: 600px;
+	left: 40%;
+	display:none;
+}
+
+#project-list {
+	position: absolute;
+	padding-left: 1%;
+}
+
+#canvas {
+	padding-top: 20%;
+}
+
+.canvas-text {
+	position: fixed;
+	top: 70%;
+	width: 200px;
+	left: 4em;
+	text-align: right;
+	font-size: 80%;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.nav-main  {
+	float:left;
+	width: 200px;
+}
+
+.clear {
+	clear:both;
+}
+
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#style-3::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#style-3::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+
