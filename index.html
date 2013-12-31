@@ -20,9 +20,24 @@
 	<a class="nav-list" href="javascript:void(0);" id="projects-link">projects</a><br><br>
 	</div>
 
-	<div class="project-description" id="spacecat241-desc"> <b>SPACECAT 241</b><br><br>I made an 8-bit nyan-cat + space invaders themed FPGA arcade game using the Altera DE2 board. The game itself is coded in Verilog and run with Quartus II.
+	<div class="project-description" id="spacecat241-desc"> <b>SPACECAT 241</b><br><br>I made an 8-bit nyan-cat meets space invaders themed FPGA arcade game using the Altera DE2 board. The game itself is coded in Verilog and run with Quartus II. Here are links to the project:<br>
+		<ul>
+			<li><a href="https://github.com/tahia-khan/defenders_v" target="_blank" class="project-container">source code</a> </li>
+			<li><a href="https://drive.google.com/file/d/0B6454eVzYMZvMXZIczRYZTFvdzQ/edit?usp=sharing" target="_blank" class="project-container">hardware layout</a></li>
+			<li><a href="https://drive.google.com/file/d/0B6454eVzYMZva1NVZUd4M1BVSW8/edit?usp=sharing" target="_blank" class="project-container">report</a></li>
+			<li><a id="show-game-vid" href="javascript:void(0);" class="project-container">video of gameplay</a></li>
+		</ul>
 
-		Here's a link to the project source code: <a href="https://github.com/tahia-khan/defenders_v" target="_blank" class="project-container">spacecat 241</a>
+		<iframe id="game-vid" style="display:none" type="text/html" width="550" height="385" src="http://www.youtube.com/watch?v=bfqY8D2-mIQ&feature=youtu.be" frameborder="0">
+			[Your browser does not support the video tag. You ought to update!]
+		</iframe>
+
+			<script type="text/javascript">
+			<!-- 
+			$("#show-game-vid").click(function() {
+				$("#game-vid").fadeToggle('fast');
+				});
+			</script>
 	</div>
 
 	<div class="project-description" id="asciichan-desc"> <b>ASCIICHAN</b><br><br>I made this simple 4chan spoof to practise using some of the features of Google App Engine and webapp2. It includes:<br>
