@@ -20,6 +20,11 @@
 	<a class="nav-list" href="javascript:void(0);" id="projects-link">projects</a><br><br>
 	</div>
 
+	<div class="project-description" id="spacecat241-desc"> <b>SPACECAT 241</b><br><br>I made an 8-bit nyan-cat + space invaders themed FPGA arcade game using the Altera DE2 board. The game itself is coded in Verilog and run with Quartus II.
+
+		Here's a link to the project source code: <a href="https://github.com/tahia-khan/defenders_v" target="_blank" class="project-container">spacecat 241</a>
+	</div>
+
 	<div class="project-description" id="asciichan-desc"> <b>ASCIICHAN</b><br><br>I made this simple 4chan spoof to practise using some of the features of Google App Engine and webapp2. It includes:<br>
 		<ul>
 			<li>Using the Datastore (GAE database) to store submissions</li>
@@ -91,6 +96,7 @@ Here's a link to the <a href="https://bitbucket.org/tkhan/bytefinder" target="_b
 	<div class="clear"> </div>
 
 			<div id="project-list" style="display:none">
+				<div id="spacecat241" class="project-container">>  spacecat 241</div>
 				<div id="asciichan" class="project-container">>  asciichan</div>
 				<div id="cusblog" class="project-container">>  custom blog</div>
 				<div id="wiki" class="project-container">>  wiki</div>
@@ -106,18 +112,28 @@ Here's a link to the <a href="https://bitbucket.org/tkhan/bytefinder" target="_b
 			$("#projects-link").click(function() {
 				$("#project-list").slideToggle();
 				});
+			$("#spacecat241").click(function() {
+				$("#wiki-desc").fadeOut('fast');
+				$("#cusblog-desc").fadeOut('fast');
+				$("#recipe-desc").fadeOut('fast');
+				$("#essay-desc").fadeOut('fast');	
+				$("#asciichan-desc").fadeOut('fast')			
+				$("#spacecat241-desc").fadeToggle('fast');
+				});
 			$("#asciichan").click(function() {
 				$("#wiki-desc").fadeOut('fast');
 				$("#cusblog-desc").fadeOut('fast');
 				$("#recipe-desc").fadeOut('fast');
-				$("#essay-desc").fadeOut('fast');				
+				$("#essay-desc").fadeOut('fast');
+				$("#spacecat241-desc").fadeOut('fast');								
 				$("#asciichan-desc").fadeToggle('fast');
 				});
 			$("#cusblog").click(function() {
 				$("#wiki-desc").fadeOut('fast');
 				$("#asciichan-desc").fadeOut('fast')
 				$("#recipe-desc").fadeOut('fast');
-				$("#essay-desc").fadeOut('fast');				
+				$("#essay-desc").fadeOut('fast');
+				$("#spacecat241-desc").fadeOut('fast');								
 				$("#cusblog-desc").fadeToggle('fast');
 			});
 			$("#wiki").click(function() {
@@ -125,6 +141,7 @@ Here's a link to the <a href="https://bitbucket.org/tkhan/bytefinder" target="_b
 				$("#asciichan-desc").fadeOut('fast')
 				$("#recipe-desc").fadeOut('fast');
 				$("#essay-desc").fadeOut('fast');
+				$("#spacecat241-desc").fadeOut('fast');								
 				$("#wiki-desc").fadeToggle('fast');
 			});
 			$("#bytefinder").click(function() {
@@ -132,6 +149,7 @@ Here's a link to the <a href="https://bitbucket.org/tkhan/bytefinder" target="_b
 				$("#asciichan-desc").fadeOut('fast')
 				$("#wiki-desc").fadeOut('fast');
 				$("#essay-desc").fadeOut('fast');
+				$("#spacecat241-desc").fadeOut('fast');								
 				$("#recipe-desc").fadeToggle('fast');
 			});
 			$("#hlessays").click(function() {
@@ -139,6 +157,7 @@ Here's a link to the <a href="https://bitbucket.org/tkhan/bytefinder" target="_b
 				$("#asciichan-desc").fadeOut('fast')
 				$("#wiki-desc").fadeOut('fast');
 				$("#recipe-desc").fadeOut('fast');
+				$("#spacecat241-desc").fadeOut('fast');								
 				$("#essay-desc").fadeToggle('fast');
 
 			});
