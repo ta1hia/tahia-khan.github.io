@@ -1,197 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> tahia index </title>
-        <script type="text/javascript" src="/static/jquery-1.8.0.js"></script>
-        <script type="text/javascript" src="/static/frontjs.js"></script>
-        <script type="text/javascript" src="/static/scrollbar.js"></script>
-        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    </head>
-    <body>
-        <br><br>
-        <div class="post-title">Tahia Khan</div>
-        <br><br>
+<html lang="en">
+<head>
 
-        <div class="nav-main">
-            <a class="nav-list" target="_blank" href="http://goo.gl/b2tyB">google+ (lol)</a><br><br>
-            <a class="nav-list" target="_blank" href="https://github.com/tahia-khan">github</a><br><br>
-            <a class="nav-list" target="_blank" href="https://bitbucket.org/tkhan">bitbucket</a><br><br>
-            <a class="nav-list" target="_blank" href="https://docs.google.com/open?id=0B6454eVzYMZvenJ4Qi1CRjZoaUk">resume</a><br><br>
-            <a class="nav-list" href="javascript:void(0);" id="projects-link">projects</a><br><br>
-        </div>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>tahia index </title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-        <div class="project-description" id="spacecat241-desc"> <b>SPACECAT 241</b><br><br>I made an 3 bit RGB nyan-cat-meets-space-invaders themed FPGA arcade game using the Altera DE2 board. The game itself is coded in Verilog and runs with Quartus II. <br><br>Here are links to the project:<br>
-            <ul>
-                <li><a href="https://github.com/tahia-khan/defenders_v" target="_blank" class="project-container">source code</a> </li>
-                <li><a href="https://drive.google.com/file/d/0B6454eVzYMZvMXZIczRYZTFvdzQ/edit?usp=sharing" target="_blank" class="project-container">hardware layout</a></li>
-                <li><a href="https://drive.google.com/file/d/0B6454eVzYMZva1NVZUd4M1BVSW8/edit?usp=sharing" target="_blank" class="project-container">report</a></li>
-                <li><a href="http://youtu.be/bfqY8D2-mIQg" target="_blank" class="project-container">video of gameplay</a></li>
-            </ul>
-        </div>
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div class="project-description" id="asciichan-desc"> <b>ASCIICHAN</b><br><br>I made this simple 4chan spoof to practise using some of the features of Google App Engine and webapp2. It is written in Python. It includes:<br>
-            <ul>
-                <li>Using the Datastore (GAE database) to store submissions</li>
-                <li>Using Memcache to explore caching functionality</li>
-                <li>Using the Static Map API from Google Maps to display the (latitude, longitude) of where a submission was made</li>
-            </ul>
-            Here's a link to the project: <a href="http://tkapphaus.appspot.com/asciichan" target="_blank" class="project-container">asciichan</a>
-        </div>
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-        <div class="project-description" id="cusblog-desc"> <b>CUSTOM BLOG</b><br><br>This is a custom blog whose backend I built from scratch using Python. It is written in Python. Backend features of include:<br>
-            <ul>
-                <li>Using the Datastore (GAE database) to store posts</li>
-                <li>Using Memcache to cache the front page and individual posts, thereby reducing Datastore hits</li>
-                <li>Displaying the last time a Datastore request was made for each page by storing query time</li>
-                <li>Adding a .json extension for all pages</li>
-                <li>Exploring URI routing and generation of unique post IDs</li>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/shawli.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
 
-            </ul>
-            Here's a link to the project: <a href="http://tkapphaus.appspot.com/blog" target="_blank" class="project-container">custom blog</a>
-        </div>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
-        <div class="project-description" id="wiki-desc"> <b>WIKI</b><br><br>A wiki is a page that can be developed collaboratively by its users by allowing anyone to edit content or add new content. It is written in Python. Backend features of this wiki include:<br>
-            <ul>
-                <li>Dynamic URI routing and generation </li>
-                <li>Using the Datastore (GAE database) to store posts and users</li>
-                <li>User authentication (hashing, cookies)</li>
+</head>
+<body>
 
-            </ul>
-            Here's a link to the project: <a href="http://wrongtahia.appspot.com/" target="_blank" class="project-container">wiki</a>
-        </div>
-
-        <div class="project-description" id="recipe-desc"> 
-            <div class="scrollbar" id="style-3"> 
-                <div class="force-overflow">
-                    <b>BYTEFINDER - REVERSE RECIPE LOOK UP</b><br><br> 
-
-                    Bytefinder is a reverse-recipe lookup application. Its basic function is to take a list of ingredients provided by the user and determine which recipes correspond best with the ingredients given.  It will return recipes in ascending order by the percentage matched with the given list of ingredients. Search results will redirect to the appropriate "Budgetbytes.com" page for the recipe.  
-                    This application is yet to be deployed because I decided to change frameworks/hosts during production.  Migration to a PostgreSQL database is still underway to allow for hosting on Heroku. <br><br>
-                    <b>Development Process</b><br><br>
-                    This application was initially built on Google App Engine and webapp2. I switched frameworks to Flask and hosting to Heroku in order to gain experience with different frameworks.  The application is available locally because the Ingredients and Recipes databases are built on SQLite3. Migration to a PostgreSQL database is still underway in order to allow for hosting on Heroku. <br><br>
-                    <b>Backend</b><br><br>
-                    The database of recipes and ingredients were built using a web crawler (with the use of Beautiful Soup library in simple Python scripts) to pull recipe names, prices, a list of ingredients corresponding to each recipe, and their URLs from "budgetbytes.blogspot.ca".  It was initially implemented on SQLite3. I need to learn how to work with PostgreSQL in order to recreate the databases for hosting on Heroku.<br><br>
-                    <b>Frontend</b><br><br>
-                    The most challenging part of designing the frontend of this application was integrating the jQuery Autocomplete UI with the ingredient search bar to dynamically generate ingredient names for the user as he/she types. I was also introduced to AJAX for the first time in order to add a loading bar for the search. <br><br><br>
-
-
-
-
-                    Here's a link to the <a href="https://bitbucket.org/tkhan/bytefinder" target="_blank" class="project-container">source code</a> of this project. Since this project hasn't actually been deployed, my cop-out solution to show off my progress is a video of the local experience! Click to show the video: <a id="show-vid" href="javascript:void(0);" class="project-container">bytefinder</a><br><br>
-
-                    <iframe id="byte-vid" style="display:none" type="text/html" width="550" height="385" src="http://www.youtube.com/embed/8KK9jajifpQ" frameborder="0">
-                        [Your browser does not support the video tag. You ought to update!]
-                    </iframe>
-
-                    <script type="text/javascript">
-                        <!-- 
-                        $("#show-vid").click(function() {
-                                $("#byte-vid").fadeToggle('fast');
-                                });
-</script>
-
-            </div>  
-        </div>  
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve column header" style="margin-top: 15%">
+          <h1>Tahia Khan</h1>
+        <hr>
+      </div>
     </div>
-
-    <div class="project-description" id="essay-desc"> <b>ESSAYS</b><br><br>Here's a link to this other thing that I spent a lot of time on: <a target="_blank" href="http://sweetibnotes.blogspot.ca/p/hl-history-americas.html" target="_blank" class="project-container">essays</a>
+    <div class="row">
+        <div class="one-third column">
+            <p>Hi. I'm a software developer. I study computer engineering at the University of Toronto and in the past I've interned at <a href="https://www.tunnelbear.com/about/" target="_blank" style="color:#5b3f2d">TunnelBear</a>, <a href="http://www.lab126.com/" target="_blank" style="color:#FF9900">Amazon</a> and <a href="www.freshbooks.com" target="_blank" style="color:#0d83dd">FreshBooks</a>. My goal in life is to have cool stuff show up when you Google my name.  </p>
+            <strong> On the Internets</strong></br></br>
+            - scope my <a href="http://www.goodreads.com/user/show/4933497-tahia" target="_blank">bookshelf</a></br>
+            - find me on <a href="https://twitter.com/ta_hia" target="_blank">twitter</a> and <a href="https://github.com/tahia-khan" target="_blank">github</a></br>
+            - check out my <a href="https://docs.google.com/document/d/1uMe40M3g4y0WmPmwryF70WyFOqOj26pvgBHVSeGmet0/edit?usp=sharing" target="_blank">resume</a></br>
+        </div>
+        <div class="two-thirds column">
+        <div class="canvasArea">
+            <strong> I recently learned how to walk on the Internet. Move me with your left and right keys.</strong></br></br>
+            <canvas id="canvas" height="200">[Your browser does not support HTML5 canvas]</canvas>
+            <script type="text/javascript" src="requestAnimFrame.js"></script>
+            <script type="text/javascript" src="movement.js"></script>
+        </div>
+        </div>
     </div>
+  </div>
 
-    <div class="clear"> </div>
-
-    <div id="project-list" style="display:none">
-        <div id="spacecat241" class="project-container">>  spacecat 241</div>
-        <div id="asciichan" class="project-container">>  asciichan</div>
-        <div id="cusblog" class="project-container">>  custom blog</div>
-        <div id="wiki" class="project-container">>  wiki</div>
-        <div id="bytefinder" class="project-container">>  reverse recipe look-up</div>
-        <div id="hlessays" class="project-container">>  essays</div>
-    </div>
-
-
-
-
-    <script type="text/javascript">
-        <!-- 
-        $("#projects-link").click(function() {
-                $("#project-list").slideToggle();
-                });
-$("#spacecat241").click(function() {
-        $("#wiki-desc").fadeOut('fast');
-        $("#cusblog-desc").fadeOut('fast');
-        $("#recipe-desc").fadeOut('fast');
-        $("#essay-desc").fadeOut('fast');	
-        $("#asciichan-desc").fadeOut('fast')			
-        $("#spacecat241-desc").fadeToggle('fast');
-        });
-$("#asciichan").click(function() {
-        $("#wiki-desc").fadeOut('fast');
-        $("#cusblog-desc").fadeOut('fast');
-        $("#recipe-desc").fadeOut('fast');
-        $("#essay-desc").fadeOut('fast');
-        $("#spacecat241-desc").fadeOut('fast');								
-        $("#asciichan-desc").fadeToggle('fast');
-        });
-$("#cusblog").click(function() {
-        $("#wiki-desc").fadeOut('fast');
-        $("#asciichan-desc").fadeOut('fast')
-        $("#recipe-desc").fadeOut('fast');
-        $("#essay-desc").fadeOut('fast');
-        $("#spacecat241-desc").fadeOut('fast');								
-        $("#cusblog-desc").fadeToggle('fast');
-        });
-$("#wiki").click(function() {
-        $("#cusblog-desc").fadeOut('fast');
-        $("#asciichan-desc").fadeOut('fast')
-        $("#recipe-desc").fadeOut('fast');
-        $("#essay-desc").fadeOut('fast');
-        $("#spacecat241-desc").fadeOut('fast');								
-        $("#wiki-desc").fadeToggle('fast');
-        });
-$("#bytefinder").click(function() {
-        $("#cusblog-desc").fadeOut('fast');
-        $("#asciichan-desc").fadeOut('fast')
-        $("#wiki-desc").fadeOut('fast');
-        $("#essay-desc").fadeOut('fast');
-        $("#spacecat241-desc").fadeOut('fast');								
-        $("#recipe-desc").fadeToggle('fast');
-        });
-$("#hlessays").click(function() {
-        $("#cusblog-desc").fadeOut('fast');
-        $("#asciichan-desc").fadeOut('fast')
-        $("#wiki-desc").fadeOut('fast');
-        $("#recipe-desc").fadeOut('fast');
-        $("#spacecat241-desc").fadeOut('fast');								
-        $("#essay-desc").fadeToggle('fast');
-
-        });
--->
-</script>
-
-<script language="javascript"> 
-    function toggle() {
-        var ele = document.getElementById("toggleText");
-        var text = document.getElementById("displayText");
-        if(ele.style.display == "block") {
-            ele.style.display = "none";
-            text.innerHTML = "show";
-        }
-        else {
-            ele.style.display = "block";
-            text.innerHTML = "hide";
-        }
-    } 
-</script>
-
-
-    </div>
-
-
-    <canvas onresize='resize()' id="canvas" width="900" height="200">[Your browser does not support HTML5 canvas]</canvas>
-    <div class="canvas-text" id="shawlispeech">hi! my name is tahia khan. i'm a computer engineering student at the university of toronto (and possibly some other things as well).<br><br>(you can move me by pressing the left and right keys) </div>
-    <script type="text/javascript" src="../static/requestAnimFrame.js"></script>
-    <script type="text/javascript" src="../static/movement.js"></script>
-
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
-
