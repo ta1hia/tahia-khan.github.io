@@ -1,0 +1,13 @@
+
+a {
+  color: #A01409; 
+  text-decoration: none}
+a:hover {
+  color: #A01409; 
+  text-decoration: underline}
+
+.header hr {
+    height: 4px;
+    background-color: #A01409;
+    margin: 1.5em 0px 1.5em 0px
+}
