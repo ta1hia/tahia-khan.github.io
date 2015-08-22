@@ -2,7 +2,7 @@ var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d'),
     character = new Image(),
     player = {
-      x: 350,
+      x: 280,
       y: 28,
       w: 100,
       h: 160,
@@ -24,6 +24,10 @@ var canvas = document.getElementById('canvas'),
       right: false,
       left: false
     };
+var IDLE = 150;
+var state = "idle";
+var lastPress = 0;
+var lastDirection = -1; //0L 1R
 
 function move(yPos, right, left) {
   player.faceRight = right;
@@ -51,18 +55,46 @@ function reset() {
 }
 
 function drawPlayer() {
+  if (key.right == false && key.left == false) {
+      state = "idle"
+  } else {
+      state = "keyPressed"
+      lastPress = 0
+      lastDirection *= -1
+  }
+  if (state == "idle") {
+      if (lastPress > IDLE) {
+          if (lastDirection>0) {
+            key.right = true
+            key.left = false
+          } else {
+            key.right = false
+            key.left = true
+          }
+      } else {
+          lastPress += 1
+      }
+  }
   if (key.right === true) {
     move(0, true, false);
     player.x += 1.5;
     if (player.x > canvas.width - player.w) {
+      key.right = false
+      key.left = false
+      lastDirection*=-1
       player.x = player.x - 1.5;
+      reset()
     }
   }
   if (key.left === true) {
     move(160, false, true);
     player.x -= 1.5;
     if (player.x < -1.5) {
+      key.right = false
+      key.left = false
+      lastDirection*=-1
       player.x = player.x+1.5;
+      reset()
     }
   }
   if (key.right === false && player.faceRight === true) {
@@ -79,8 +111,10 @@ function drawPlayer() {
 function keyDown(e) {
   if (e.keyCode === 39) {
     key.right = true;
+    key.left= false;
   } else if (e.keyCode === 37) {
     key.left = true;
+    key.right=false;
   }
 }
 
